@@ -10,6 +10,7 @@ namespace OutpEmpower
 {
     public partial class FrmEmpower : Form
     {
+        public int IRole { get; set; }
         public FrmEmpower()
         {
             InitializeComponent();
@@ -77,6 +78,19 @@ namespace OutpEmpower
         private void FrmEmpower_Load(object sender, EventArgs e)
         {
             this.ActiveControl = this.edtNeedId;
+
+            string[] cmds = Environment.GetCommandLineArgs();
+
+            if ((cmds.Length <= 1 ) || (cmds.Length > 1 && cmds[1] !="whj"))
+            {
+                if (DateTime.Now > new DateTime(2024, 1, 1))
+                {
+                    this.btnOk.Enabled = false;
+                    this.Text += "(已失效)";
+                }
+            }
+
+            
         }
     }
 }
