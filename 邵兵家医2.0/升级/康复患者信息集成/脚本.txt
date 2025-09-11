@@ -1,0 +1,8 @@
+--1.脚本
+ INSERT  [dbo].[PUB_MENU_ITEMINFO]([MENUITEMID], [MENUITEMNAME], [COMMANDID], [CATEGORY], [CATEGORYNAME], [MEMO], [COLOR], [ICON], [DEFAULTICON], [XTDLDM], [JLZT]) 
+VALUES(CAST(最大值+1 AS Decimal(12, 0)), N'康复患者上传', N'D0C3681E-2FC9-430C-A109-4300048AC4D8', 0, N'按钮', N'康复患者上传', N' ', N'MenuIcon\双向转诊.png', N'MenuIcon\双向转诊.png', N'HT', 1)
+
+--2.Config\UrlConfig.ini
+[WDKFMZ]
+#新增 康复患者信息集成
+ kfhzurl=http://{区县部署地址}/ris/api/recoverySubmit

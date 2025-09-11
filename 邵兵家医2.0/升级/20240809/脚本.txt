@@ -1,0 +1,8 @@
+--1.脚本
+ INSERT  [dbo].[PUB_MENU_ITEMINFO]([MENUITEMID], [MENUITEMNAME], [COMMANDID], [CATEGORY], [CATEGORYNAME], [MEMO], [COLOR], [ICON], [DEFAULTICON], [XTDLDM], [JLZT]) 
+VALUES(CAST(最大值+1 AS Decimal(12, 0)), N'体征信息', N'2F374E36-32F0-46D6-B72B-9585BA3BB622', 0, N'按钮', N'体征信息', N' ', N'MenuIcon\双向转诊.png', N'MenuIcon\双向转诊.png', N'HT', 1)
+
+--2.Config\UrlConfig.ini
+[WDPATSIGN]
+#新增 康复患者信息集成
+patsignurl=http://{区县部署地址}/ris/api/recoverySubmit

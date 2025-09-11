@@ -1,0 +1,1568 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Winning.Outp.DAL.Order.DataObject</name>
+    </assembly>
+    <members>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.DrugStock">
+            <summary>
+            库存
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.DrugStock.Kcsl">
+            <summary>
+            库存数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.DrugStock.Kzbz">
+            <summary>
+            控制标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.DrugStock.Ypmc">
+            <summary>
+            药品名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.DrugStock.Sftsbz">
+            <summary>
+            提示标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.DrugStock.Tsnr">
+            <summary>
+            提示内容
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.ExecuteDept">
+            <summary>
+            执行科室
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.ExecuteDept.Ksdm">
+            <summary>
+            科室代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.ExecuteDept.Ksmc">
+            <summary>
+            科室名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.ExecuteDept.Lb">
+            <summary>
+            类别
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.ExecuteDept.Py">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.ExecuteDept.Wb">
+            <summary>
+            五笔
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.ExecuteDept.Postion">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec">
+            <summary>
+            病人历史信息对象
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Patid">
+            <summary>
+            病人唯一索引
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Ghxh">
+            <summary>
+            挂号序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Ghrq">
+            <summary>
+            挂号日期
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Ksdm">
+            <summary>
+            挂号科室代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Ksmc">
+            <summary>
+            挂号科室名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Ysdm">
+            <summary>
+            医生代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Ysmc">
+            <summary>
+            医生名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Zddm">
+            <summary>
+            诊断代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Zdmc">
+            <summary>
+            诊断名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Kmmc">
+            <summary>
+            挂号科目名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Xh">
+            <summary>
+            本次就诊对应的索引序号，对于处方相当于处方序号字段
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.HistoryInfoRec.Sfzt">
+            <summary>
+            0未收费2已收费3已退费
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo">
+            <summary>
+            毒、麻、精神 领药人 信息
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.OrderXh">
+            <summary>
+            处方序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.OrderMxXh">
+            <summary>
+            处方明细序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.Bz">
+            <summary>
+            毒麻精神标志(0普通、1麻醉、2精神、3剧毒、4危险、5化试、6胰岛素、9抗菌素)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.LyrXm">
+            <summary>
+            领药人姓名
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.LyrXb">
+             <summary>
+            领药人性别 (男/女)
+             </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.LyrNl">
+            <summary>
+            领药人年龄
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.LyrDh">
+            <summary>
+            领药人电话
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.LyrSfz">
+            <summary>
+            领药人身份证
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.HzSfz">
+            <summary>
+            患者身份证
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderDmjsInfo.LyrDz">
+            <summary>
+            领药人地址
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.OrderInfo">
+            <summary>
+            处方信息
+            </summary>
+        </member>
+        <member name="F:Winning.Outp.DAL.Order.DataObject.OrderInfo._sCjrq">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderInfo.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:Winning.Outp.DAL.Order.DataObject.OrderInfo.hasSetBriefInfo">
+            <summary>
+            是否已经设置过简明信息
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderInfo.GetBriefInfo">
+            <summary>
+            获取简要信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderInfo.SetBriefInfo">
+            <summary>
+            设置简要信息
+            该方法只有在从数据库处方、处方明细库加载转换成本对象的时候，调用一下，可以对list循环调用
+            设置原始值，该方法调用一次有效
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.Cjrq">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.ShowLrrq">
+            <summary>
+            用于展示的录入日期,由于原来的lrrq在现实过程中会重新赋值为当前时间。
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bLgbz">
+            <summary>
+            留观标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sTzsj">
+            <summary>
+            停止时间
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCqcfxh">
+            <summary>
+            长期处方序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCqcfmxxh">
+            <summary>
+            长期处方明细序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bLsbz">
+            <summary>
+            临时医嘱否
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYbjesf">
+            <summary>
+            医保金额审方标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bBfbbz">
+            <summary>
+            部分报销标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bPsbz">
+            <summary>
+            皮试标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bUse">
+            <summary>
+            在用
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bXgDjbz">
+            <summary>
+            是否可以修改单价的处理
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bYbJzbz">
+            <summary>
+            急诊标志，或加急标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bZbbz">
+            <summary>
+            自备标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bZfbz">
+            <summary>
+            自费标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bZfcfbz">
+            <summary>
+            自费处方标记
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fBjdcgh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fBjjl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fBjLjsl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fBjmryl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fBjyppc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fBjyyts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCfRule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCyLrsl">
+            <summary>
+            草药录入数量，跟随单位变化，与剂量类似
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fGgxs">
+            <summary>
+            规格系数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fkcsl">
+            <summary>
+            虚拟字段，无需保存，加载的使用同步一下库存状态，目前在加载历史处方的时候有用
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fKzdcgh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fKzjl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fKzLjsl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fKzmryl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fKzyppc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sQyid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fKzyyts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fljts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMrdcgh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMrjl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMrLjsl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMrmryl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fTqmckzl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fTqmykzl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fTqkzts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMryppc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMryyts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMxje">
+            <summary>
+            明细金额(小计) ＝ 处方贴数 ×药品数量 ×药品单价 / 药库系数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMzxs">
+            <summary>
+            门诊系数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMzYlsj">
+            <summary>
+            药品零售价* ＝ 药库价格 ＝ 药库单位 ×基本单位价格
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMzYpsl">
+            <summary>
+            门诊药品数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fRecipeFee">
+            <summary>
+            处方总金额
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fRecipeFee_Xm">
+            <summary>
+            处方项目总金额
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fRecipeFee_Yp">
+            <summary>
+            处方药品总金额
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fRecipeYb_ypFee">
+            <summary>
+            处方医保部分药品总金额
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fRecipeYbFee">
+            <summary>
+            处方医保部分总金额
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fYkxs">
+            <summary>
+            药库系数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fYlsj">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fYpfj">
+            <summary>
+            批发价
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fYpjl">
+            <summary>
+            药品剂量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fYpmcsl">
+            <summary>
+            每次用药数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fYpsl">
+            <summary>
+            药品数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fYpxs">
+            <summary>
+            药品系数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.Mxjlzt">
+            <summary>
+            明细记录状态
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.MxShbz">
+            <summary>
+            审核标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nBckgrdColor">
+            <summary>
+            字体背景
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nBxbz">
+            <summary>
+            报销标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nCfjlzt">
+            <summary>
+            处方记录状态(0:录入,1:确认,2:取消)//Old 0:录入后状态,1:收费已确认,2:划价处取消,3:医技确认,4:医技作废,5收费处已读取,但未收费
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nCflx">
+            <summary>
+            处方类型1:西药处方,2:中药处方,3:草药处方,4:治疗处方,5:其他处方,6体检处方
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nCfmxs">
+            <summary>
+            处方明细数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nCfts">
+            <summary>
+            处方天数，药品付数一般为1 ，草药时提醒输入
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nCurePlanNo">
+            <summary>
+            治疗方案序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nCysl">
+            <summary>
+            草药数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nCyts">
+            <summary>
+            草药代煎数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nDmbz">
+            <summary>
+            毒麻精神标志 (药品毒麻标志 0 不是 1 是)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nTsbz">
+            <summary>
+            特殊药品标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nTsdybz">
+            <summary>
+            特殊药品对应标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nDwbz">
+            <summary>
+            单位标志 0剂量单位1门诊单位 //??重复字段
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nDwlb">
+            <summary>
+            单位类别 0剂量单位1门诊单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nDxmYpbz">
+            <summary>
+            大项目药品标志 0其它类型 1西药 2成药 3草药
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nEkbz">
+            <summary>
+            儿科处方标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nEkyp">
+            <summary>
+            儿科药品标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nFontColor">
+            <summary>
+            字体颜色
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nFzxh">
+            <summary>
+            分组序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nGgIdm">
+            <summary>
+            规格IDM
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nGhxh">
+            <summary>
+            挂号序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nIdm">
+            <summary>
+            idm
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nIncXh">
+            <summary>
+            顺序号，前台程序自行内部使用
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nLdlx">
+            <summary>
+            联动类型(00,：无联动项目；10,:药品项目联动;20,:项目联动;30,:用法联动)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nLdxh">
+            <summary>
+            联动序号(对应联动的主联动序号)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nLdxmbz">
+            <summary>
+            是否是材料费联动
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nMzlybz">
+            <summary>
+            门诊领药标志0:普通(按剂量×频次×天数 ) 1：按次取整（每次用药取整）
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nOrdXh">
+            <summary>
+            明细序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nPatid">
+            <summary>
+            病人唯一标识
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nSybz">
+            <summary>
+            输液处方标志0：非输液处方  1：输液处方
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nTscfbz">
+            <summary>
+            特殊处方标志(尿毒症标志)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nWarnBz">
+            <summary>
+            合理用药报警标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nXgbz">
+            <summary>
+            修改标志 0未修改1已修改
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nXmlb">
+            <summary>
+            项目类别
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nXmsl">
+            <summary>
+            项目数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nXysl">
+            <summary>
+            西药数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYbkzbz">
+            <summary>
+            医保控制标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYbshbz">
+            <summary>
+            医保审核标志    审方标志0:不需要审方，1:未审方，2:审方通过, 3:审方不通过
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYbspbz">
+            <summary>
+            医保审批标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYfLdsl">
+            <summary>
+            用法联动数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYpbz">
+            <summary>
+            药品标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYyts">
+            <summary>
+            用药天数 缺省为1，输液时提醒输入
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYzzt">
+            <summary>
+            处方状态(0录入，1审核，2执行，3取消，4停止)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nZbz">
+            <summary>
+            组标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nZysl">
+            <summary>
+            中药数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.OldRecipeNo">
+            <summary>
+            旧处方序号，后台用于删除上次录入的数据使用
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.OldRecipeMxNo">
+            <summary>
+            旧处方明细序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.RecipeCaption">
+            <summary>
+            处方显示号，显示为数字1，2，3等
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.RecipeCaptionEx">
+            <summary>
+            处方显示名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.RecipeNo">
+            <summary>
+            处方号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sBbzl">
+            <summary>
+            项目标本种类
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCfMemo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCfyfdm">
+            <summary>
+            草药药品用法代码（草药专用）
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCfyfmc">
+            <summary>
+            草药用法名称（草药专用）
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCfysdm">
+            <summary>
+            开处方医生代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCfysmc">
+            <summary>
+            开处方医生名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCfZddm">
+            <summary>
+            处方诊断代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCfzdmc">
+            <summary>
+            处方诊断名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCzyh">
+            <summary>
+            录入操作员号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sDmxsmc">
+            <summary>
+            毒麻特殊药品的说明
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sDxmdm">
+            <summary>
+            大项目代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sDxmmc">
+            <summary>
+            大项目名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sGgdw">
+            <summary>
+            规格单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sGhksdm">
+            <summary>
+            挂号科室
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sGhksmc">
+            <summary>
+            挂号科室名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sGroupKey">
+            <summary>
+            组序号,和sKey配对
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sHzxm">
+            <summary>
+            患者姓名
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sJldw">
+            <summary>
+            剂量单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sKey">
+            <summary>
+            明细唯一标志，每次都使用Guid定位，前台动态生成，仅仅用来标识唯一
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sLcxmdm">
+            <summary>
+            临床项目代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sLrrq">
+            <summary>
+            录入日期
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sMcjldw">
+            <summary>
+            剂量单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sMzdm">
+            <summary>
+            麻醉代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sMzdw">
+            <summary>
+            门诊单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sMzmc">
+            <summary>
+            麻醉名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sPcdm">
+            <summary>
+            频次代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sPcmc">
+            <summary>
+            频次名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYfdm">
+            <summary>
+            药房代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYfmc">
+            <summary>
+            药房名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpdm">
+            <summary>
+            药品代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpdw">
+            <summary>
+            药品单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpgg">
+            <summary>
+            药品规格
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpjxdm">
+            <summary>
+            药品剂型代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpjxmc">
+            <summary>
+            药品剂型名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpmc">
+            <summary>
+            药品名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpyfdm">
+            <summary>
+            用法代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYpyfmc">
+            <summary>
+            用法名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYznr">
+            <summary>
+            医嘱内容
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYzzt">
+            <summary>
+            明细备注,嘱托
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sZxdw">
+            <summary>
+            最小单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.IsSaved">
+            <summary>
+            标记以保存（用于识别）
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nMrjldwbz">
+            <summary>
+            默认剂量标志 0 最小单位 1：剂量单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.Mxbmbz">
+            <summary>
+            明细保密标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.Cfbmbz">
+            <summary>
+            处方保密标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bFslxbz">
+            <summary>
+            付数联动标志(用于草药)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.OrderDetailFjbzInfo">
+            <summary>
+            处方分级包装信息
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fKzYcjzyl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fMrYcjzyl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fBjYcjzyl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sSfbz">
+            <summary>
+            审方标志 00000，第1位老师、第2位门办、第3位审方处、第4位药房、第5位皮试  0:不需要审方，1:未审方，2:审方通过, 3:审方不通过
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sEktz">
+            <summary>
+            儿科体重
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sEknlsm">
+            <summary>
+            儿科年龄说明
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.OrderDetailDmjsInfo">
+            <summary>
+            毒、麻、精神 药品领药人信息(此处本应该为List[OrderDmjsInfo] 但在查询出orderInfo被当作orderItem对象，重复出现，顾在此也直接把对象看成 处方明细)
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.djCkcstate">
+            <summary>
+             草药代煎选择状态记录 add by wangsm for 川沙
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCymrjl">
+            <summary>
+            草药每日剂量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.SCycyjx">
+            <summary>
+            草药采用剂型
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.SCycyjxdm">
+            <summary>
+            草药采用剂型
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.SCyfycs">
+            <summary>
+            草药每剂服用次数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.SCyyyff">
+            <summary>
+            草药用药方法
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.SCyyyffdm">
+            <summary>
+            草药用药方法
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.SCyfyyq">
+            <summary>
+            草药服用要求
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.SCyfyyqdm">
+            <summary>
+            草药服用要求
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYllb">
+            <summary>
+            医疗类型
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sYbbfzdm">
+            <summary>
+            并发症代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sDjzt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bWsbz">
+            <summary>
+            外送标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bZybz">
+            <summary>
+            历史处方药品是否在用
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nXz">
+            <summary>
+            性质
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nLjdyxh">
+            <summary>
+            临床路径定义序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nKssKzbz">
+            <summary>
+            抗生素用药目的  0 预防用药 1 治疗用药 2 手术预防用药 
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sPsypdm">
+            <summary>
+            皮试药品代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.Jlsm">
+            <summary>
+            剂量说明
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.OrderLdxmRec">
+            <summary>
+            当前用法联动项目集合
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nYbjyb">
+            <summary>
+            医保甲乙丙标志，0甲类1乙类2丙类,因为HIS这边统一口径不同，所以做这个处理仅供显示使用
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bQjbz">
+            <summary>
+            抢救标志
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.nOpsOrderInfo">
+            <summary>
+            手术医嘱类
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.HasModified">
+            <summary>
+            数据是否被修改
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sTsjfzfdm">
+            <summary>
+            特殊煎法制服代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sTsjfzfmc">
+            <summary>
+            特殊煎法制服名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCfyyts">
+            <summary>
+            草药用药天数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCyrycs">
+            <summary>
+            草药日用次数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCydjts">
+            <summary>
+            草药代煎天数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.fCyjzzl">
+            <summary>
+            草药煎煮总量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.sCyjldw">
+            <summary>
+            草药剂量单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderInfo.bCcfBz">
+            <summary>
+            长处方标志
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.OrderLdxm">
+            <summary>
+            联动项目
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sSkey">
+            <summary>
+            内部对应的处方明细的唯一索引
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.RecipeNo">
+            <summary>
+            处方序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sYfdm">
+            <summary>
+            用法代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sXmdm">
+            <summary>
+            项目代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sXmmc">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.fXmsl">
+            <summary>
+            项目数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sXmdw">
+            <summary>
+            项目单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.nXgbz">
+            <summary>
+            修改标志  0 药品录入处修改  1治疗录入
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sTbzddm">
+            <summary>
+            特病诊断代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sTbzdmc">
+            <summary>
+            特病诊断名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sYllb">
+            <summary>
+            医疗类别
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderLdxm.sYbbfzdm">
+            <summary>
+            医保并发症
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.OrderSaveRecorder">
+            <summary>
+            处方保存记录器
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderSaveRecorder.Clear">
+            <summary>
+            清理
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderSaveRecorder.AddSaveMap(System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,Winning.Outp.DAL.Order.DataObject.OrderInfo)">
+            <summary>
+            增加一个
+            </summary>
+            <param name="skey"></param>
+            <param name="oldRxno"></param>
+            <param name="oldno"></param>
+            <param name="newRxno"></param>
+            <param name="newno"></param>
+            <param name="order"></param>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderSaveRecorder.AddSaveMap(Winning.Outp.DAL.Order.DataObject.OrderSaveMap)">
+            <summary>
+            增加一条保存记录
+            </summary>
+            <param name="map"></param>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveRecorder.Ghxh">
+            <summary>
+            记录器保存对应的病人挂号序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveRecorder.DeletedRecipe">
+            <summary>
+            执行删除的处方序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveRecorder.SavedRecipe">
+            <summary>
+            保存过的处方对照
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.OrderSaveMap">
+            <summary>
+            处方明细更新对照
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.#ctor(System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,Winning.Outp.DAL.Order.DataObject.OrderInfo)">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.sKey">
+            <summary>
+            保存对应处方明细的skey
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.RecipeNo">
+            <summary>
+            处方序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.DetailNo">
+            <summary>
+            处方明细序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.NewRecipeNo">
+            <summary>
+            新处方序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.NewDetailNo">
+            <summary>
+            新处方明细序号
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderSaveMap.OldOrderInfo">
+            <summary>
+            原处方明细对象（保留）
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.OrderFjbzInfo">
+            <summary>
+            分级包装信息
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderFjbzInfo.nIdm">
+            <summary>
+            药品代码
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderFjbzInfo.sFjbzDw">
+            <summary>
+            分级包装单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderFjbzInfo.fFjbzxs">
+            <summary>
+            分级包装系数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.OrderFjbzInfo.sYfdm">
+            <summary>
+            药房代码
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.Order.DataObject.RecRules">
+            <summary>
+            处方规则
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fBjdcgh">
+            <summary>
+            报警单次挂号数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fBjjl">
+            <summary>
+            报警剂量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fBjLjsl">
+            <summary>
+            报警累计
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fBjmryl">
+            <summary>
+            报警每日用量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fBjts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fBjYppc">
+            <summary>
+            报警频次
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fCfRule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fKzdcgh">
+            <summary>
+            控制单次挂号数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fKzjl">
+            <summary>
+            控制剂量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fKzLjsl">
+            <summary>
+            控制累计
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fKzmryl">
+            <summary>
+            控制每日用量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fKzts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fKzYppc">
+            <summary>
+            控制频次
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fljts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fMrdcgh">
+            <summary>
+            默认单次挂号数量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fMrjl">
+            <summary>
+            默认剂量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fMrLjsl">
+            <summary>
+            默认累计
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fMrmryl">
+            <summary>
+            默认每日用量
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fMrts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fMrYppc">
+            <summary>
+            默认频次
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.nClbz">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.nDwlb">
+            <summary>
+            单位类别 0剂量单位1门诊单位
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.nLxbz">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fCcfsxts">
+            
+             
+             
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fCcfxxts">
+            
+             
+             
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.sErrMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.sFldm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.sYsZcdm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fMrYcjzyl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fBjYcjzyl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fKzYcjzyl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fTqmckzl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fTqmykzl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.Order.DataObject.RecRules.fTqkzts">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

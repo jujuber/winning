@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Winning.Outp.DAL.PrintDriver.DataObject</name>
+    </assembly>
+    <members>
+        <member name="T:Winning.Outp.DAL.PrintDriver.DataObject.ICustomPrintPageSetting">
+            <summary>
+            自定义页面打印页面设置
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.PrintDriver.DataObject.ICustomPrintPageSetting.PrepareBeforePrint(System.Data.DataSet@)">
+            <summary>
+            打印前预处理
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Winning.Outp.DAL.PrintDriver.DataObject.PagePartition">
+            <summary>
+            页面分区
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.PrintDriver.DataObject.PagePartition.NewDefault">
+            <summary>
+            新建默认
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PagePartition.StartLine">
+            <summary>
+            起始行
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PagePartition.Name">
+            <summary>
+            分区名称
+            </summary>
+        </member>
+        <member name="T:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting">
+            <summary>
+            打印设置
+            </summary>
+        </member>
+        <member name="M:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.DeepCopy">
+            <summary>
+            深度拷贝
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.SchemaId">
+            <summary>
+            打印策略ID
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.SchemaName">
+            <summary>
+            打印策略名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.TemplateName">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.TempleteDictory">
+            <summary>
+            模板位置，相对根目录位置
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.CharCountInALine">
+            <summary>
+            每行上字符数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.LinesInOnePage">
+            <summary>
+            一页上的行数
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.StartLine">
+            <summary>
+            起始行：shcama不做存储，实时设定
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.DeFaultStartLine">
+            <summary>
+            默认起始行，恒值
+            </summary>
+        </member>
+        <member name="P:Winning.Outp.DAL.PrintDriver.DataObject.PrintSetting.PagePartitions">
+            <summary>
+            页面分区设置
+            </summary>
+        </member>
+    </members>
+</doc>

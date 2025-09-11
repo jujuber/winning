@@ -1,0 +1,3 @@
+
+ INSERT  [dbo].[PUB_MENU_ITEMINFO]([MENUITEMID], [MENUITEMNAME], [COMMANDID], [CATEGORY], [CATEGORYNAME], [MEMO], [COLOR], [ICON], [DEFAULTICON], [XTDLDM], [JLZT]) 
+VALUES(CAST(最大值+1 AS Decimal(12, 0)), N'万达康复', N'7ABA3987-3C61-407C-88B7-6D3CDF9DB603', 0, N'按钮', N'万达康复', N' ', N'MenuIcon\双向转诊.png', N'MenuIcon\双向转诊.png', N'HT', 1)

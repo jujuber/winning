@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2BE4BF6-E228-45FF-B2B0-1AC24E5CBCFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Winning.Outp.BLL.PageMenu</RootNamespace>
+    <AssemblyName>Winning.Outp.BLL.PageMenu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/CIS/13 家庭医生站%28CIS%29/门诊医生站%28CIS%29_201504/BLL/Winning.Outp.BLL.PageMenu</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>http://tfs2018-web.winning.com.cn:8080/tfs/wn_his</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\分支医院\家庭医生站\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>D:\分支医院\家庭医生站\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Winning.FrameWork.Core">
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.FrameWork.Core.Common">
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.Core.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.FrameWork.Core.PageMenu">
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.Core.PageMenu.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.FrameWork.DAL">
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.DAL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.FrameWork.DAL.Kernel">
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.DAL.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.FrameWork.IDAL">
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.IDAL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.FrameWork.Kernel">
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.Model.Common, Version=5.14.06.16, Culture=neutral, processorArchitecture=32位">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Model.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.Model.Outp, Version=5.14.5.19, Culture=neutral, processorArchitecture=32位">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Model.Outp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.Outp.Core, Version=5.14.5.19, Culture=neutral, processorArchitecture=32位">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.Outp.Core.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=32位">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.Core.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.Outp.DAL.PatInfo.DataObject, Version=5.14.5.19, Culture=neutral, processorArchitecture=32位">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.DAL.PatInfo.DataObject.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.Outp.UI.JTYS.GetChssForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=32位">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.UI.JTYS.GetChssForm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Winning.Outp.UI.JTYS.HealthStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=32位">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.UI.JTYS.HealthStatus.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllergyCommand.cs" />
+    <Compile Include="ASMC\ASMC_RJGLCommand.cs" />
+    <Compile Include="ASMC\ASMC_RYGLCommand.cs" />
+    <Compile Include="ASMC\ASMC_RYSQCommand.cs" />
+    <Compile Include="AssistantServiceCommand.cs" />
+    <Compile Include="BjdCommand.cs" />
+    <Compile Include="CCFCallCommand.cs" />
+    <Compile Include="CcfSqCommand.cs" />
+    <Compile Include="CfdpCommand.cs" />
+    <Compile Include="ChargeCommand.cs" />
+    <Compile Include="ChssTransPatCommand.cs" />
+    <Compile Include="ConsultApplyCommand.cs" />
+    <Compile Include="ConsultPatListCommand.cs" />
+    <Compile Include="CpPackageCommand.cs" />
+    <Compile Include="CytgxxCommand.cs" />
+    <Compile Include="DepartmentSelectCommand.cs" />
+    <Compile Include="DispensationCommand.cs" />
+    <Compile Include="DjzyCommand.cs" />
+    <Compile Include="DoctorWorkloadCommand.cs" />
+    <Compile Include="DrugOrderUpCommand.cs" />
+    <Compile Include="EHRCommand.cs" />
+    <Compile Include="FczbCommand.cs" />
+    <Compile Include="FollowInfoCommand.cs" />
+    <Compile Include="FormKuangfuTreat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKuangfuTreat.Designer.cs">
+      <DependentUpon>FormKuangfuTreat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetContextValueHelper.cs" />
+    <Compile Include="GzssCommand.cs" />
+    <Compile Include="HealthRecordsCommand.cs" />
+    <Compile Include="HfqytsCommand.cs" />
+    <Compile Include="HistoryDiagnosisCommand .cs" />
+    <Compile Include="HistoryMzblCommand.cs" />
+    <Compile Include="HistoryRecipeCommand.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="JiachuangCommand.cs" />
+    <Compile Include="JtysqyCommand.cs" />
+    <Compile Include="KangfuTreatCommand.cs" />
+    <Compile Include="kangfuWeihuCommand.cs" />
+    <Compile Include="KfpdCommand.cs" />
+    <Compile Include="LisRisReportQuery.cs" />
+    <Compile Include="LogWriter.cs" />
+    <Compile Include="MeasureBloodCommand .cs" />
+    <Compile Include="MobilePayCommand.cs" />
+    <Compile Include="NewDiagnoseApplyCommand.cs" />
+    <Compile Include="OperationNoticeCommand.cs" />
+    <Compile Include="OrderLogisticsCommand.cs" />
+    <Compile Include="OutpAppointCommand.cs" />
+    <Compile Include="OutpEmergencyCommand.cs" />
+    <Compile Include="OutpSpecialTreatCommand.cs" />
+    <Compile Include="PainFollowUpCommand.cs" />
+    <Compile Include="Patient\PatInfoModifyCommand.cs" />
+    <Compile Include="Patient\PatJczCommand.cs" />
+    <Compile Include="Patient\PatJsjzCommand.cs" />
+    <Compile Include="Patient\PatRangeShowSet.cs" />
+    <Compile Include="PortalQueryCommand.cs" />
+    <Compile Include="PrintPreviewCommand.cs" />
+    <Compile Include="Prmrysqcx.cs" />
+    <Compile Include="Prmrysqd.cs" />
+    <Compile Include="Prmrytzd.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Patient\RefreshPatlistCommand.cs" />
+    <Compile Include="RefundApplyCommand.cs" />
+    <Compile Include="RegionalMedicalCommand.cs" />
+    <Compile Include="ReportCard\CanJiCommand.cs" />
+    <Compile Include="ReportCard\ChronicDiseaseCommand.cs" />
+    <Compile Include="ReportCard\DeathCommand.cs" />
+    <Compile Include="ReportCard\FoodOriginCommand.cs" />
+    <Compile Include="ReportCard\GlycuresisCommand.cs" />
+    <Compile Include="ReportCard\HealthAbstractCommand.cs" />
+    <Compile Include="ReportCard\HurtCommand.cs" />
+    <Compile Include="ReportCard\HypertensionCommand.cs" />
+    <Compile Include="ReportCard\InfectiousDiseaseCommand.cs" />
+    <Compile Include="ReportCard\StrokeCommand.cs" />
+    <Compile Include="ReportCard\TuberculosisCommand.cs" />
+    <Compile Include="ReportCard\TumorCommand.cs" />
+    <Compile Include="RydjCommand.cs" />
+    <Compile Include="SaveFullCommand.cs" />
+    <Compile Include="SelectPatCommand.cs" />
+    <Compile Include="Service References\prescription.cs" />
+    <Compile Include="ServiceInCommand.cs" />
+    <Compile Include="SignedQueryCommand.cs" />
+    <Compile Include="SqdyyCommand.cs" />
+    <Compile Include="SxzzJZCommand.cs" />
+    <Compile Include="SxzzZCCommand.cs" />
+    <Compile Include="TijianCommand.cs" />
+    <Compile Include="TransAcceptCommand.cs" />
+    <Compile Include="TransferDeptCommand.cs" />
+    <Compile Include="TransHospitalCommand.cs" />
+    <Compile Include="TreatmentBagCallCommand.cs" />
+    <Compile Include="UnlockPatCommand.cs" />
+    <Compile Include="WandaSxzzCommandID.cs" />
+    <Compile Include="WdPatSigndataCommand.cs" />
+    <Compile Include="WdkfhzdataCommand.cs" />
+    <Compile Include="WdkfmzCommand.cs" />
+    <Compile Include="WorkflowSetCommand.cs" />
+    <Compile Include="XinZhiIntegrationQueryCommand.cs" />
+    <Compile Include="YldyCommand.cs" />
+    <Compile Include="DiseaseCertificateCommand.cs" />
+    <Compile Include="SpecialDiseaseCommand.cs" />
+    <Compile Include="CDRPortalQueryCommand.cs" />
+    <Compile Include="YyghCommand.cs" />
+    <Compile Include="ZczzCommand.cs" />
+    <Compile Include="ZyzCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormKuangfuTreat.resx">
+      <DependentUpon>FormKuangfuTreat.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

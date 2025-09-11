@@ -1,0 +1,2042 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Winning.FrameWork.DAL.Kernel</name>
+    </assembly>
+    <members>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IDataSchema.InitSchema(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            初始化数据库架构信息
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IDataSchema.LoginUserCode">
+            <summary>
+            数据库登录操作员
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IDataSchema.DataBase">
+            <summary>
+            当前登录的数据库
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IDataTableObject">
+            <summary>
+            单表操作对象，一般内部使用
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IDataTableObject.SqlConnect(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            建立指定的数据库连接
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IDataTableObject.QueryTable(System.String)">
+            <summary>
+            取得指定表数据
+            </summary>
+            <param name="sSql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IDataTableObject.UpdateTable(System.Data.DataTable,System.String)">
+            <summary>
+            更新指定表数据
+            </summary>
+            <param name="uTab"></param>
+            <param name="sSql"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IColumns.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IColumns.FieldType">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IColumns.DataType">
+            <summary>
+            数据库的原始字段类型
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IColumns.MaxLength">
+            <summary>
+            数据库的字符串类型字段的最大长度
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IColumns.Precision">
+            <summary>
+            数据库浮点型字段的长度
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IColumns.Scale">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IColumns.Nullable">
+            <summary>
+            是否允许为空
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IDB">
+            <summary>
+            数据库架构
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IDB.Name">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IDB.Tables">
+            <summary>
+            库表信息
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IDB.Views">
+            <summary>
+            视图信息
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IDB.Procedures">
+            <summary>
+            存储过程信息
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IProcedures.Name">
+            <summary>
+            存储过程名称
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IProcedures.Parameters">
+            <summary>
+            传参
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ITables.Name">
+            <summary>
+            库表名称
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ITables.KeyColumns">
+            <summary>
+            主键相关字段
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ITables.Columns">
+            <summary>
+            库表所含字段
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IViews.Name">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IViews.Columns">
+            <summary>
+            字段列表
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.ICustomDataObj">
+            <summary>
+            自定义数据访问对象
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ICustomDataObj.Create``1(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            实例化一个自定义数据访问对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ICustomDataObj.DeleteTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ICustomDataObj.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0)">
+            <summary>
+            删除指定表的单条数据
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">单个表实体对象</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ICustomDataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0,System.Action{``0})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体</param>
+            <param name="OperateAddObject">条件表达式</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ICustomDataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体集合</param>
+            <param name="OperateAddObject">条件表达式集合</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ICustomDataObj.QueryTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            单表查询使用
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类</param>
+            <param name="where">lambda表达式</param>
+            <returns>表实体集合</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IEntityObject">
+            <summary>
+            Entity表实体对象操作接口
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.GetEntityConnection(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            取得指定的数据库连接参数
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.GetDataModel(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            取得指定的数据实体映射对象
+            </summary>
+            <param name="SysType">指定的系统大类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.GetDataModel(Winning.FrameWork.Kernel.Enum.SystemType,System.Boolean)">
+            <summary>
+            取得指定的数据实体映射对象
+            </summary>
+            <param name="SysType">指定的系统大类</param>
+            <param name="NewDataModel">是否使用新建的DataModel</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.GetDataSchema(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            取得指定系统的数据库架构信息
+            </summary>
+            <param name="SysType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(System.Collections.Generic.List{``0},System.Data.Objects.ObjectContext)">
+            <summary>
+            删除指定的表数据,支持外部传入数据库实体，主要用于支持事务
+            </summary>
+            <param name="TabData">要删除的数据</param>
+            <param name="Db">数据实体</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(``0)">
+            <summary>
+            删除指定表的单条数据
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="TabData">单个表实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0)">
+            <summary>
+            删除指定表的单条数据
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">单个表实体对象</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable(System.String,System.Object)">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Object)">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.DeleteTable``1(``0,System.Data.Objects.ObjectContext)">
+            <summary>
+            删除指定的表数据,支持外部传入数据库实体，主要用于支持事务
+            </summary>
+            <param name="TabData">要删除的数据</param>
+            <param name="Db">数据实体</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(``0,System.Action{``0})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="TabData">需要保存的表实体</param>
+            <param name="OperateAddObject">条件表达式</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="TabData">需要保存的表实体集合</param>
+            <param name="OperateAddObject">条件表达式集合</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0,System.Action{``0})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体</param>
+            <param name="OperateAddObject">条件表达式</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体集合</param>
+            <param name="OperateAddObject">条件表达式集合</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,``0)">
+            <summary>
+            单表保存专用,保存一条数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(System.String,``0)">
+            <summary>
+            单表保存专用,保存一条数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(``0,System.Data.Objects.ObjectContext)">
+            <summary>
+            单表保存专用,支持外部传入数据库实体，主要用于支持事务
+            </summary>
+            <param name="TabData">表数据</param>
+            <param name="Db">数据库实体</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            单表保存专用,保存一组数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            单表保存专用,保存一组数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.SaveTable``1(System.Collections.Generic.List{``0},System.Data.Objects.ObjectContext)">
+            <summary>
+            单表保存专用,支持外部传入数据库实体，主要用于支持事务
+            </summary>
+            <param name="TabData">表数据</param>
+            <param name="Db">数据库实体</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.CreateTable``1(System.String)">
+            <summary>
+            单表数据原型检索使用，无条件
+            </summary>
+            <param name="TableName">检索表名</param>
+            <returns>返回数据实体集合</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.CreateTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String)">
+            <summary>
+            单表数据原型检索使用，无条件
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <returns>返回数据实体集合</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.CreateTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Boolean)">
+            <summary>
+            单表数据原型检索使用，无条件
+            </summary>
+            <typeparam name="T">指定返回的表对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">表对象名</param>
+            <param name="IsCache">是否缓存</param>
+            <returns>返回表对象实体</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityObject.QueryTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            单表查询使用
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类</param>
+            <param name="where">lambda表达式</param>
+            <returns>表实体集合</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IEntityService">
+            <summary>
+            提供Ado Entity FrameWork的组合应用服务,主要应用于DAL层的数据库操作组合
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Query``2(System.Func{System.Linq.IQueryable{``0},System.Collections.Generic.List{``1}})">
+            <summary>
+            复杂应用查询
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <typeparam name="TResult">结果集类型</typeparam>
+            <param name="process">查询处理</param>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Query``3(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``1},System.Collections.Generic.List{``2}})">
+            <summary>
+            复杂应用查询
+            </summary>
+            <typeparam name="T1">实体类型</typeparam>
+            <typeparam name="T2">实体类型</typeparam>
+            <typeparam name="TResult">结果集类型</typeparam>
+            <param name="process">查询处理</param>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Query``4(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``1},System.Linq.IQueryable{``2},System.Collections.Generic.List{``3}})">
+            <summary>
+            复杂应用查询
+            </summary>
+            <typeparam name="T1">实体类型</typeparam>
+            <typeparam name="T2">实体类型</typeparam>
+            <typeparam name="T3">实体类型</typeparam>
+            <typeparam name="TResult">结果集类型</typeparam>
+            <param name="process">查询处理</param>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Query``5(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``1},System.Linq.IQueryable{``2},System.Linq.IQueryable{``3},System.Collections.Generic.List{``4}})">
+            <summary>
+            复杂应用查询
+            </summary>
+            <typeparam name="T1">实体类型</typeparam>
+            <typeparam name="T2">实体类型</typeparam>
+            <typeparam name="T3">实体类型</typeparam>
+            <typeparam name="T4">实体类型</typeparam>
+            <typeparam name="TResult">结果集类型</typeparam>
+            <param name="process">查询处理</param>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Query``6(System.Func{System.Linq.IQueryable{``0},System.Linq.IQueryable{``1},System.Linq.IQueryable{``2},System.Linq.IQueryable{``3},System.Linq.IQueryable{``4},System.Collections.Generic.List{``5}})">
+            <summary>
+            复杂应用查询
+            </summary>
+            <typeparam name="T1">实体类型</typeparam>
+            <typeparam name="T2">实体类型</typeparam>
+            <typeparam name="T3">实体类型</typeparam>
+            <typeparam name="T4">实体类型</typeparam>
+            <typeparam name="T5">实体类型</typeparam>
+            <typeparam name="TResult">结果集类型</typeparam>
+            <param name="process">查询处理</param>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            检索库表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Update``1(System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            更新数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Source"></param>
+            <param name="OperateAddObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Update``1(``0,System.Action{``0})">
+            <summary>
+            更新数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Source"></param>
+            <param name="OperateAddObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Delete``1(System.Collections.Generic.List{``0})">
+            <summary>
+            删除数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.Delete``1(``0)">
+            <summary>
+            删除数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.BeginTran">
+            <summary>
+            启动事务
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.RollbackTran">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IEntityService.CommitTran">
+            <summary>
+            提交事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IDataProcessing">
+            <summary>
+            框架全局数据处理接口，所有DAL层的数据处理单元，如果需要返回
+            数据对象供业务逻辑层使用的，则实现这个单元
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IDataProcessing.Open(System.Object[])">
+            <summary>
+            执行LinQ 脚本
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="Values">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IExecProcessing">
+            <summary>
+            框架全局数据处理接口，所有DAL层的数据处理单元，如果无需返回数据集，只返回变量标志的，请继承实现这个接口
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IExecProcessing.Exec(System.Object[])">
+            <summary>
+            执行
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="Values">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IListProcessing">
+            <summary>
+            框架全局数据处理接口，所有DAL层的数据处理单元，如果需要返回
+            数据对象供业务逻辑层使用的，则实现这个单元
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IListProcessing.Open``1(System.Object[])">
+            <summary>
+            执行Ling脚本
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="Values">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IListProcessingEx">
+            <summary>
+            框架全局数据处理接口，所有DAL层的数据处理单元，如果需要返回
+            数据对象供业务逻辑层使用的，则实现这个单元
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IListProcessingEx.Open``1(System.Object[])">
+            <summary>
+            执行Ling脚本
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="Values">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.ISqlProcessing">
+            <summary>
+            框架全局数据处理接口，所有DAL层的数据处理单元，如果需要返回
+            数据对象供业务逻辑层使用的，则实现这个单元(针对超大数据量，并且检索关系复杂的，只能使用公共SQL来完成的，可以使用这个接口)
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISqlProcessing.Open(System.Object[])">
+            <summary>
+            执行LinQ 脚本
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="Values">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.ILinqExec">
+            <summary>
+            用于执行Linq脚本的方法类
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ILinqExec.Execute``1(System.String,System.String,System.Object[])">
+            <summary>
+            执行Ling脚本
+            </summary>
+            
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+             <param name="ClassName">类名</param>
+            <param name="Values">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.SdkHelper">
+            <summary>
+            框架用于调用自身接口的实例，反射结果,这个是内部使用，不对外公开
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SdkHelper.ExecuteDataObject``1(System.String,System.Object[])">
+            <summary>
+            执行Ling脚本
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SdkHelper.CreateInteFace(System.String,System.String)">
+            <summary>
+            用与访问接口的实现类
+            </summary>
+            <param name="FileName"></param>
+            <param name="ClassName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SdkHelper.CreateInteFace(System.String,System.String,System.Object[])">
+            <summary>
+            用与访问接口的实现类,
+            </summary>
+            <param name="FileName"></param>
+            <param name="ClassName"></param>
+            <param name="Values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SdkHelper.RunSystemFunction(System.String,System.String,System.String)">
+            <summary>
+            运行框架内部的初时化方法
+            </summary>
+            <param name="FileName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.SqlHelper">
+            <summary>
+            SQL访问接口，一般用于C/S模式专用，基本上不对外公布，目前主要提供给外挂报表使用
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetCustomDataObj">
+            <summary>
+            取得一个自定义的EF框架数据访问对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetDataSchema">
+            <summary>
+            取得数据库架构信息(BaseObject内部使用)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetSql">
+            <summary>
+            返回具有ESQL访问功能的开发接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetAdoDb">
+            <summary>
+            返回具有AdoDb访问功能的开发接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetClientDataSet">
+            <summary>
+            返回一个客户段操作数据访问对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetClientDataSet(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            返回一个客户段操作指定数据库的数据访问对象
+            </summary>
+            <param name="Dsquery">系统大类代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.ExecuteDataObject``1(System.String,System.Object[])">
+            <summary>
+            执行Ling脚本
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetEntityObject">
+            <summary>
+            返回一个Entity的表实体操作对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.SqlHelper.GetEntityService(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            返回一个Entity的访问操作服务对象
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.SqlHelper.uFields">
+            <summary>
+            数据值转换接口
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IAdoDb">
+            <summary>
+            Ado.NET数据访问操作接口
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecProc(System.Collections.ArrayList,System.String@)">
+            <summary>
+            执行三步递交的存储过程
+            </summary>
+            <param name="SqlList">执行存储过程的SQL字符串数组</param>
+            <param name="ErrMsg">返回的错误信息</param>
+            <returns>返回值：DataTable</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.SqlConnect(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            建立指定系统的数据库连接
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <returns>返回值 Bool</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.CreateCommand(System.String)">
+            <summary>
+            对数据源执行SQL语句或者存储过程
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：DbCommand</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.CreateCommand(System.String,System.Data.CommandType)">
+            <summary>
+            对数据源执行SQL语句或者存储过程
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：DbCommand</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.CreateCommand(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            对数据源执行SQL语句或者存储过程
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DbCommand</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.CreateAdapter(System.String)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据适配器
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：DbDataAdapter</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.CreateAdapter(System.String,System.Data.CommandType)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据适配器
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：DbDataAdapter</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.CreateAdapter(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据适配器
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DbDataAdapter</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.CreateParameter(System.String,System.String,System.String)">
+            <summary>
+            创建参数对象专用，可与其它SQL执行命令配合使用，用于生成需要传入的参数
+            </summary>
+            <param name="field">参数名</param>
+            <param name="dbtype">数据类型</param>
+            <param name="value">参数值</param>
+            <returns>返回值：DbParameter</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteCommand(System.String)">
+            <summary>
+            执行非查询语句,并返回受影响的记录行数
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteCommand(System.String,System.Data.CommandType)">
+            <summary>
+            执行非查询语句,并返回受影响的记录行数
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteCommand(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            执行非查询语句,并返回受影响的记录行数
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteCommand(System.Collections.ArrayList)">
+            <summary>
+            批量执行非查询语句,并返回记录装态
+            </summary>
+            <param name="SqlList">传入SQL语句的集合</param>
+            <returns>返回值：int 0成功 1失败</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteCommand(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            执行非查询语句,并返回受影响的记录行数
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteScalar(System.String)">
+            <summary>
+            执行非查询语句,并返回首行首列的值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：object</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteScalar(System.String,System.Data.CommandType)">
+            <summary>
+            执行非查询语句,并返回首行首列的值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：object</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteScalar(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            执行非查询语句,并返回首行首列的值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：object</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteScalar(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            执行非查询语句,并返回首行首列的值
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：object</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteReader(System.String)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建单向数据流
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：DataReader</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteReader(System.String,System.Data.CommandType)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建单向数据流
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：DataReader</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteReader(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建单向数据流
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataReader</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.ExecuteReader(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建单向数据流
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataReader</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataSet(System.String)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据缓存
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：DataSet</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataSet(System.String,System.Data.CommandType)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据缓存
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：DataSet</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataSet(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据缓存
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataSet</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataSet(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据缓存
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataSet</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataView(System.String)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据视图
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：DataView</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataView(System.String,System.Data.CommandType)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据视图
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：DataView</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataView(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据视图
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataView</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataView(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建数据视图
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataView</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataTable(System.String)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建内存表
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <returns>返回值：DataTable</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataTable(System.String,System.Data.CommandType)">
+            <summary>
+            根据指定的SQL语句或者存储过程创建内存表
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <returns>返回值：DataTable</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataTable(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建内存表
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataTable</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IAdoDb.GetDataTable(System.String,System.Data.CommandType,System.Data.Common.DbParameter[])">
+            <summary>
+            根据指定的SQL语句或者存储过程创建内存表
+            </summary>
+            <param name="sql">传入SQL语句</param>
+            <param name="cmdtype">指定如何解释命令字符串</param>
+            <param name="parameters">表示System.Data.Common.DbCommand的参数,可使用HisData.CreateParameter方法创建</param>
+            <returns>返回值：DataTable</returns>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IAdoDb.SqlSwitch">
+            <summary>
+            SQL语法开关的设置
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IClientDataSet">
+            <summary>
+            集成数据集操作接口,具备持久连接,支持前台事务
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.SqlCommit">
+            <summary>
+            提交前台事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.SqlRollBack">
+            <summary>
+            取消前台事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.SqlTransaction">
+            <summary>
+            提交前台事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Append">
+            <summary>
+            插入一行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ApplyUpdates">
+            <summary>
+            提交数据集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Cancel">
+            <summary>
+            取消本次修改
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.CreateDataSet">
+            <summary>
+            创建ClientDatSset
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Delete">
+            <summary>
+            删除当前行数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Edit">
+            <summary>
+            修改当前行的数据
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.EmptyDataSet">
+            <summary>
+            清空数据集
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.FieldByName(System.String)">
+            <summary>
+            按指定的字段名取值
+            </summary>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.FieldsAdd(System.String,System.Type)">
+            <summary>
+            添加字段列
+            </summary>
+            <param name="FieldName"></param>
+            <param name="FieldType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.First">
+            <summary>
+            移动到第一行
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Locate(System.String,System.String)">
+            <summary>
+            定位指定的数据
+            </summary>
+            <param name="StrFieldName">指定定位的字段名</param>
+            <param name="StrFieldValue">指定定位的值</param>
+            <returns>返回布尔值，代表是否定位成功</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Locate(System.String[],System.String[])">
+            <summary>
+            定位指定的数据
+            </summary>
+            <param name="FieldName">指定多个定位的字段名</param>
+            <param name="FieldValue">指定多个定位的值</param>
+            <returns>返回布尔值，代表是否定位成功</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Next">
+            <summary>
+            向下移动一行
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Open">
+            <summary>
+            打开返回数据集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Close">
+            <summary>
+            关闭数据集　
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.DataRequest(System.String)">
+            <summary>
+            传入需要执行的SQL语句
+            </summary>
+            <param name="strsql">SQL语句</param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.CachedDataRequest(System.String)">
+            <summary>
+            传入需要执行的SQL语句，并缓存数据
+            </summary>
+            <param name="strsql"></param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.CachedDataRequest(System.String,System.Boolean)">
+            <summary>
+            传入需要执行的SQL语句，并决定是否缓存数据
+            </summary>
+            <param name="strsql">SQL语句</param>
+            <param name="Cached">是否缓存</param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.Post">
+            <summary>
+            更新本次修改
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.RecordFirst">
+            <summary>
+            将多数据集移动到第一个
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.RecordNext">
+            <summary>
+            向下移动一个数据集
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.GetRecord(System.String)">
+            <summary>
+            取得满足条件的记录
+            </summary>
+            <param name="FilterStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.GetRecords(System.String)">
+            <summary>
+            取得满足条件的记录集
+            </summary>
+            <param name="FilterSt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteNoneQuery(System.String)">
+            <summary>
+            执行无返回值的sql语句
+            </summary>
+            <param name="commandText"></param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteNoneQuery(System.String,System.Data.CommandType)">
+            <summary>
+            执行无返回值的sql语句
+            </summary>
+            <param name="commandText"></param>
+            <param name="commandType"></param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteNoneQuery(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            执行无返回值的sql语句
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteNoneQuery(System.String,System.Data.Common.DbParameter[],System.Data.CommandType)">
+            <summary>
+            执行无返回值的sql语句
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <param name="commandType"></param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteNoneQuery(System.String,System.Data.Common.DbParameter[],System.Int32@)">
+            <summary>
+            执行sql语句，并返回自增序号
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <param name="identityValue"></param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteNoneQuery(System.String,System.Data.Common.DbParameter[],System.Data.CommandType,System.Int32@)">
+            <summary>
+            执行sql语句，指定CommandType并返回自增序号
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <param name="commandType"></param>
+            <param name="identityValue"></param>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataTable(System.String)">
+            <summary>
+            返回数据表
+            </summary>
+            <param name="commandText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataTable(System.String,System.Boolean)">
+            <summary>
+            返回需要缓存的数据集
+            </summary>
+            <param name="commandText"></param>
+            <param name="cached">是否需要缓存</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataTable(System.String,System.Data.CommandType)">
+            <summary>
+            返回数据表,指定CommandType
+            </summary>
+            <param name="commandText"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataTable(System.String,System.Boolean,System.Data.CommandType)">
+            <summary>
+            返回需要缓存的数据集,指定CommandType
+            </summary>
+            <param name="commandText"></param>
+            <param name="cached"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataTable(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            返回数据表,带参数
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataTable(System.String,System.Data.Common.DbParameter[],System.Data.CommandType)">
+            <summary>
+            返回数据表,带参数,指定CommandType
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataTable(System.String,System.String)">
+            <summary>
+            需要反复使用RowFilter对同一DataTable进行过滤时可以使用此方法。
+            系统将对每次调用返回的DataTable进行缓存
+            </summary>
+            <param name="commandText"></param>
+            <param name="rowFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataSet(System.String)">
+            <summary>
+            执行查询，并以DataSet返回结果集
+            </summary>
+            <param name="commandText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataSet(System.String,System.Data.CommandType)">
+            <summary>
+            执行查询，并以DataSet返回结果集
+            </summary>
+            <param name="commandText"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataSet(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            执行查询，并以DataSet返回结果集
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteDataSet(System.String,System.Data.Common.DbParameter[],System.Data.CommandType)">
+            <summary>
+            执行查询，并以DataSet返回结果集
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteReader(System.String)">
+            <summary>
+            创建数据适配器
+            </summary>
+            <param name="commandText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteReader(System.String,System.Data.CommandType)">
+            <summary>
+            创建数据适配器
+            </summary>
+            <param name="commandText"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteReader(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            创建数据适配器
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteReader(System.String,System.Data.Common.DbParameter[],System.Data.CommandType)">
+            <summary>
+            创建数据适配器
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteScalar(System.String)">
+            <summary>
+            执行非查询语句,并返回首行首列的值
+            </summary>
+            <param name="commandText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteScalar(System.String,System.Data.CommandType)">
+            <summary>
+            执行非查询语句,并返回首行首列的值
+            </summary>
+            <param name="commandText"></param>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteScalar(System.String,System.Data.Common.DbParameter[])">
+            <summary>
+            执行非查询语句,并返回首行首列的值
+            </summary>
+            <param name="commandText"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.ExecuteScalar(System.String,System.Data.Common.DbParameter[],System.Data.CommandType)">
+             <summary>
+            执行非查询语句,并返回首行首列的值
+             </summary>
+             <param name="commandText"></param>
+             <param name="parameters"></param>
+             <param name="commandType"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IClientDataSet.DoUpdateTable(System.Data.DataTable,System.String,System.Boolean)">
+            <summary>
+            更新表。方法内部会调用table的GetChanges方法。
+            若不是在事务内调用Update，则在更新成功后会自动调用table的AcceptChanges方法。
+            </summary>
+            <param name="table"></param>
+            <param name="sqlTable"></param>
+            <param name="needUpdateSchema"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.ChangeCount">
+            <summary>
+            发生改变的行数
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.CommandText">
+            <summary>
+            传入需要执行的SQL指令
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.Data">
+            <summary>
+            当前返回数据的DataSet对象数据
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.IsEmpty">
+            <summary>
+            是否为空
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.Eof">
+            <summary>
+            判断是否到了最后一行
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.FieldCount">
+            <summary>
+            返回全部的数据列记录数
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.Filter">
+            <summary>
+            过滤SQL脚本
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.Filtered">
+            <summary>
+            执行过滤 true 为启动过滤 false 为关闭过滤
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.FieldDefs">
+            <summary>
+            字段列对象
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.RecNo">
+            <summary>
+            行索引
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.RecordCount">
+            <summary>
+            数据集记录数
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.Row">
+            <summary>
+            当前行索引
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.Fields">
+            <summary>
+            字段列
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.SqlSwitch">
+            <summary>
+            SQL语法开关的设置
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.View">
+            <summary>
+            返回当前的数据的视图
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IClientDataSet.RecordEof">
+            <summary>
+            判断是否到了多数据集的最后一个，true代表是最后一个，false代表未到最后一个
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IFieldConvert">
+            <summary>
+            处理数据字段的转换功能
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDecimal(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为Decimal类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDecimal(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为Decimal类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDecimal(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为Decimal类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDecimal(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为Decimal类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToString(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为String类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToString(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为String类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToString(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为String类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToString(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为String类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToSingle(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为float类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToSingle(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为float类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToSingle(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为float类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToSingle(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为float类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDouble(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为Double类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDouble(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为Double类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDouble(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为Double类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDouble(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为Double类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt16(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为Int16类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt16(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为Int16类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt16(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为Int16类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt16(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为Int16类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt32(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为Int32类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt32(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为Int32类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt32(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为Int32类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt32(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为Int32类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt64(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为Int64类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt64(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为Int64类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt64(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为Int64类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToInt64(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为Int64类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDateTime(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为Datetime类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDateTime(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为Datetime类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDateTime(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为Datetime类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToDateTime(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为Datetime类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToBoolean(System.Data.DataRow,System.String)">
+            <summary>
+            将指定的字段转换为Boolean类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToBoolean(System.Data.DataRow,System.Int32)">
+            <summary>
+            将指定的字段转换为Boolean类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToBoolean(System.Data.DataRow,System.String,System.Object)">
+            <summary>
+            将指定的字段转换为Boolean类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldName"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldConvert.ToBoolean(System.Data.DataRow,System.Int32,System.Object)">
+            <summary>
+            将指定的字段转换为Boolean类型
+            </summary>
+            <param name="uTab"></param>
+            <param name="FieldIdx"></param>
+            <param name="DefValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IFieldDefs">
+            <summary>
+            字段列操作接口
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.IFieldDefs.Add(System.String,System.Type)">
+            <summary>
+            向内存表内添加一列
+            </summary>
+            <param name="FieldName">字段名</param>
+            <param name="Fieldtype">字段类型</param>
+            <returns>字段对象</returns>
+        </member>
+        <member name="T:Winning.FrameWork.DAL.Kernel.IFields">
+            <summary>
+            数据字段操作接口
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsBoolean">
+            <summary>
+            转换为布尔值
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsCurrency">
+            <summary>
+             转换为精度型
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsDateTime">
+            <summary>
+            转换为日期型
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsDouble">
+            <summary>
+            转换为双精度
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsFloat">
+            <summary>
+            转换为浮点
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsInteger">
+            <summary>
+            转换为整形
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsString">
+            <summary>
+            转换为字符串
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.AsVariant">
+            <summary>
+            转换为对象
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.CanModify">
+            <summary>
+            设置是否允许编辑
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.DataSize">
+            <summary>
+            数据长度
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.DisplayName">
+            <summary>
+            显示字段名
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.DisplayText">
+            <summary>
+            显示列名
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.FieldName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.FieldNo">
+            <summary>
+            字段列号
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.IFields.Value">
+            <summary>
+            对象读写
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.First">
+            <summary>
+            将数据集行号移动到第一条
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.FieldName(System.Int32)">
+            <summary>
+            取得指定列的字段名
+            </summary>
+            <param name="FieldIdx">字段索引</param>
+            <returns>返回字段名</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.SqlAdd(System.String)">
+            <summary>
+            添加SQL语句
+            </summary>
+            <param name="values">SQL语句</param>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.SqlCmd(System.String)">
+            <summary>
+            传入当前需要执行的SQL语句
+            </summary>
+            <param name="values">SQL语句</param>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.SqlConnect(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            传入需要连接的数据库的标示符,DSQUERY代表默认数据链接
+            </summary>
+            <param name="values">连接标示符</param>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.SqlData(System.Int32)">
+            <summary>
+            取得指定列的数据
+            </summary>
+            <param name="values">列索引</param>
+            <returns>返回object对象</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.SqlOpen">
+            <summary>
+            执行SQL语句（有返回值的SQL语句，用于检索数据）
+            </summary>
+            <returns>返回值：int</returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.Next">
+            <summary>
+            向下移动一条数据
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.ToObjectQuery">
+            <summary>
+            返回当前的ObjectQuery原型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.ToXml">
+            <summary>
+            将当前数据集的XML字符串
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.ToDataTable">
+            <summary>
+            将当前数据集转换为DataTable对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.DAL.Kernel.ISql.FieldByName(System.String)">
+            <summary>
+            按指定字段名访问
+            </summary>
+            <param name="FieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISql.DbErr">
+            <summary>
+            当前SQL语句执行是否成功 true代表出现异常 false代表未出现异常
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISql.Eof">
+            <summary>
+            判断是否到了数据集的最后一行，1代表已经到了最后一行 0代表尚未到达最后一行
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISql.FieldCount">
+            <summary>
+            数据集字段列总合
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISql.RowCount">
+            <summary>
+            数据集行记录总合
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISql.Fields">
+            <summary>
+            按字段列转换
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Ansi_Defaults">
+            <summary>
+            SET ANSI_DEFAULTS 是客户端不会修改的服务器端设置。客户端管理自己的设置。在默认情况下，这些设置与服务器设置相反。用户不应修改服务器设置。若要更改客户端行为
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Ansi_Null_Dflt_On">
+             <summary>
+            仅当在 CREATE TABLE 和 ALTER TABLE 语句中没有指定列的为空性时，该设置才能影响新列的为空性。SET ANSI_NULL_DFLT_ON 为 ON 时，如果没有显式指定列的为空性状态，则使用 ALTER TABLE 和 CREATE TABLE 语句创建的新列可以使用空值。SET ANSI_NULL_DFLT_ON 对使用显式 NULL 或 NOT NULL 创建的列无效 
+             </summary>
+        </member>
+        <!-- 对于成员“P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Ansi_Nulls”忽略有格式错误的 XML 注释 -->
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Ansi_Padding">
+            <summary>
+            针对小于定义的列大小的值以及 char、varchar、binary 和 varbinary 数据中有尾随空格的值，此语句可以控制存储此类值的方式
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Ansi_Warnings">
+            <summary>
+            设置为 ON 时，如果聚合函数（如 SUM、AVG、MAX、MIN、STDEV、STDEVP、VAR、VARP 或 COUNT）中出现空值，将生成警告消息。设置为 OFF 时，不发出警告。
+            设置为 ON 时，被零除错误和算术溢出错误将导致回滚语句，并生成错误消息。设置为 OFF 时，被零除错误和算术溢出错误将导致返回空值。如果在 character、
+            Unicode 或 binary 列上尝试执行 INSERT 或 UPDATE 操作，而这些列中的新值长度超出最大列大小，则将出现被零除错误和算术溢出错误导致返回空值的行为。
+            如果 SET ANSI_WARNINGS 为 ON，则将按 SQL-92 标准的规定取消 INSERT 或 UPDATE。字符列的尾随空格和二进制列的尾随零都将被忽略。设置为 OFF 时，数据将剪裁为列的大小，并且语句执行成功。
+            在 binary 或 varbinary 数据转换中发生截断时，不管 SET 选项如何设置，都不发出警告或错误消息
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Concat_Null_Yields_Null">
+            <summary>
+            当 SET CONCAT_NULL_YIELDS_NULL 为 ON 时，串联空值与字符串将产生 NULL 结果。例如，SELECT 'abc' + NULL 将生成 NULL。当 SET CONCAT_NULL_YIELDS_NULL 为 OFF 时，串联空值与字符串将产生字符串本身（空值作为空字符串处理）。例如，SELECT 'abc' + NULL 将生成 abc
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Cursor_Close_On_Commit">
+            <summary>
+            如果 SET CURSOR_CLOSE_ON_COMMIT 为 ON，此设置将遵从 SQL-92 标准，在提交或回滚时关闭所有打开的游标。如果 SET CURSOR_CLOSE_ON_COMMIT 为 OFF，则在提交事务时将不关闭游标。
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Implicit_Transactions">
+            <summary>
+            如果设置为 ON，SET IMPLICIT_TRANSACTIONS 将连接设置为隐式事务模式。如果设置为 OFF，则使连接恢复为自动提交事务模式。
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.Quoted_Identifier">
+            <summary>
+            当 SET QUOTED_IDENTIFIER 为 ON 时，标识符可以由双引号分隔，而文字必须由单引号分隔。当 SET QUOTED_IDENTIFIER 为 OFF 时，标识符不可加引号，且必须遵守所有 Transact-SQL 标识符规则。”
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.DAL.Kernel.ISqlSwitch.IsSqlSwitch">
+            <summary>
+            是否使用SQL语法开关
+            </summary>
+        </member>
+    </members>
+</doc>

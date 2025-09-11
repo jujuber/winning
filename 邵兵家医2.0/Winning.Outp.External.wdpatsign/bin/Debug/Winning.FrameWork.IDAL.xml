@@ -1,0 +1,915 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Winning.FrameWork.IDAL</name>
+    </assembly>
+    <members>
+        <member name="T:Winning.FrameWork.IDAL.AssmblePack">
+            <summary>
+            内部存储使用
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.AssmbleCache">
+            <summary>
+            用于存放DataObj反射调用的缓存，在 C/S 和分布式模式下统一适用
+            </summary>
+        </member>
+        <member name="F:Winning.FrameWork.IDAL.AssmbleCache.uPack">
+            <summary>
+            当前调用过的DataObject的反射对象集和
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.AssmbleCache.FindAssmbleCache(System.String)">
+            <summary>
+            用于查找当前指定的反射方法是否调用过
+            </summary>
+            <param name="CallName">调用名，命名空间加方法名，这里的命名规范注意规则</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.AssmbleCache.AddAssmbleCache(System.String,System.Reflection.MethodInfo,System.Object,System.Boolean)">
+            <summary>
+            添加一个反射对象
+            </summary>
+            <param name="CallName"></param>
+            <param name="MethodObj"></param>
+            <param name="ClassObj"></param>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.AssmbleCache.MethodObj">
+            <summary>
+            当前可以使用的DataObject的方法
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.AssmbleCache.ClassObj">
+            <summary>
+            当前可以使用的DataObject对象
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.AssmbleCache.IsList">
+            <summary>
+            当前方法是否是泛型方法
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.BaseAssmble">
+            <summary>
+            基础反射调用类
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.BaseAssmble.ExecuteList``1(System.String,System.String,System.Boolean@,System.Object[])">
+            <summary>
+            反射调用返回集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="FileName"></param>
+            <param name="ObjectName"></param>
+            <param name="IsList"></param>
+            <param name="Parametres"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.BaseAssmble.Execute(System.String,System.String,System.Type,System.Object[])">
+            <summary>
+            基础反射调用方法
+            </summary>
+            <param name="FileName"></param>
+            <param name="ObjectName"></param>
+            <param name="DllType"></param>
+            <param name="Parametres"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.Convert.ToObjectList``1(System.String,System.String,System.Linq.IQueryable)">
+            <summary>
+            将返回数据转换为对象
+            </summary>
+            <param name="FileName"></param>
+            <param name="ClassName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.Convert.ToObject(System.String,System.String,System.Linq.IQueryable)">
+            <summary>
+            将返回数据转换为对象(一般是一行数据对象)
+            </summary>
+            <param name="FileName"></param>
+            <param name="ClassName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.Convert.ToDataTable(System.Linq.IQueryable)">
+            <summary>
+            将IQueryable转换为DataTable
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.DataHelper">
+            <summary>
+            数据对象调用接口,用于提供业务逻辑层对于数据逻辑层的数据访问
+            </summary>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.DataHelper.DataObj">
+            <summary>
+            数据对象访问接口
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.DataObj">
+            <summary>
+            负责调用各种不同的数据对象并执行，这里分离前台业务逻辑与真实的数据逻辑处理的关系，同时以对象形式返回
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.IDataObj">
+            <summary>
+            数据对象调用接口,用于提供业务逻辑层对于数据逻辑层的数据访问
+            </summary>
+        </member>
+        <!-- 对于成员“M:Winning.FrameWork.IDAL.IDataObj.Execute``1(System.String,System.Object[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.Execute``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.Execute``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.Execute``1(System.String,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.Execute(System.String,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回DataTable</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.Execute``1(System.String,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <!-- 对于成员“M:Winning.FrameWork.IDAL.IDataObj.ExecuteList``1(System.String,System.Object[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.ExecuteList``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.ExecuteList``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.ExecuteList``1(System.String,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.ExecuteList``1(System.String,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="IsCache">是否缓存数据</param>
+            <param name="Parametres">任意传参</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable``1(``0)">
+            <summary>
+            删除指定表的单条数据
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="TabData">单个表实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0)">
+            <summary>
+            删除指定表的单条数据
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">单个表实体对象</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable(System.String,System.Object)">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.DeleteTable(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Object)">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(``0,System.Action{``0})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="TabData">需要保存的表实体</param>
+            <param name="OperateAddObject">条件表达式</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="TabData">需要保存的表实体集合</param>
+            <param name="OperateAddObject">条件表达式集合</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0,System.Action{``0})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体</param>
+            <param name="OperateAddObject">条件表达式</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体集合</param>
+            <param name="OperateAddObject">条件表达式集合</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable(System.String,System.Data.DataTable)">
+            <summary>
+            单表保存专用
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">需要更新的表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Data.DataTable)">
+            <summary>
+            单表保存专用
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">需要更新的表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,``0)">
+            <summary>
+            单表保存专用,保存单条数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(System.String,``0)">
+            <summary>
+            单表保存专用,保存单条数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            单表保存专用,保存一组数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.SaveTable``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            单表保存专用,保存一组数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">表数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.CreateTable``1(System.String)">
+            <summary>
+            单表数据原型检索使用，无条件
+            </summary>
+            <param name="TableName">检索表名</param>
+            <returns>返回数据实体集合</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.CreateTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String)">
+            <summary>
+            单表数据原型检索使用，无条件
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <returns>返回数据实体集合</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.CreateTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Boolean)">
+            <summary>
+            单表数据原型检索使用，无条件
+            </summary>
+            <typeparam name="T">指定返回的表对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">表对象名</param>
+            <param name="IsCache">是否缓存</param>
+            <returns>返回表对象实体</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.ESqlQueryTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String)">
+            <summary>
+            ESql单表查询使用
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="SysType"></param>
+            <param name="ESql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.QueryTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            单表查询使用
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类</param>
+            <param name="where">lambda表达式</param>
+            <returns>表实体集合</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.GetIdentity(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Int32)">
+            <summary>
+            取一组自增列数据
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <param name="TableName">库表名称</param>
+            <param name="ValueCount">返回记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDataObj.GetIdentity(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Int32,Winning.FrameWork.DAL.Kernel.IAdoDb)">
+            <summary>
+            取一组自增列数据
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <param name="TableName">库表名称</param>
+            <param name="ValueCount">返回记录数</param>
+            <param name="uSql">外部指定连接组件</param>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.IDataObj.DbTran">
+            <summary>
+            框架全局事务处理对象
+            </summary>
+        </member>
+        <!-- 对于成员“M:Winning.FrameWork.IDAL.DataObj.Execute``1(System.String,System.Object[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:Winning.FrameWork.IDAL.DataObj.Execute``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="SysType"></param>
+            <param name="ObjectName"></param>
+            <param name="Parametres"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.Execute``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="SysType"></param>
+            <param name="ObjectName"></param>
+            <param name="Parametres"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.Execute``1(System.String,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.Execute(System.String,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回DataTable</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.Execute``1(System.String,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <!-- 对于成员“M:Winning.FrameWork.IDAL.DataObj.ExecuteList``1(System.String,System.Object[])”忽略有格式错误的 XML 注释 -->
+        <member name="M:Winning.FrameWork.IDAL.DataObj.ExecuteList``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="SysType"></param>
+            <param name="ObjectName"></param>
+            <param name="Parametres"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.ExecuteList``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象,返回指定的对象类型，根据指定的系统大类代码自动决定默认的数据逻辑处理类库
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="SysType"></param>
+            <param name="ObjectName"></param>
+            <param name="Parametres"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.ExecuteList``1(System.String,System.String,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="Parametres">任意传参</param>
+            <returns>返回指定类型</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.ExecuteList``1(System.String,System.String,System.Boolean,System.Object[])">
+            <summary>
+            调用DataObject数据对象，返回指定的对象类型，需指明运行哪个类库
+            </summary>
+            <typeparam name="T">指定返回类型</typeparam>
+            <param name="FileName">文件名</param>
+            <param name="ObjectName">对象名</param>
+            <param name="IsCache">是否缓存</param>
+            <param name="Parametres">任意传参</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable``1(System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable``1(System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Collections.Generic.List{``0})">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable``1(``0)">
+            <summary>
+            删除指定表的单条数据
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="TabData">单个表实体对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0)">
+            <summary>
+            删除指定表的单条数据
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">单个表实体对象</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable(System.String,System.Object)">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.DeleteTable(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Object)">
+            <summary>
+            删除指定的表数据
+            </summary>
+            <param name="SysType">系统大类代码</param>
+            <param name="TableName">检索表名</param>
+            <param name="TabData">要删除的数据</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.SaveTable``1(``0,System.Action{``0})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="TabData">需要保存的表实体</param>
+            <param name="OperateAddObject">条件表达式</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.SaveTable``1(System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="TabData">需要保存的表实体集合</param>
+            <param name="OperateAddObject">条件表达式集合</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,``0,System.Action{``0})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体</param>
+            <param name="OperateAddObject">条件表达式</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.SaveTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Collections.Generic.List{``0},System.Action{System.Collections.Generic.IList{``0}})">
+            <summary>
+            单表保存专用
+            </summary>
+            <typeparam name="T">表实体对象</typeparam>
+            <param name="SysType">系统大类代码</param>
+            <param name="TabData">需要保存的表实体集合</param>
+            <param name="OperateAddObject">条件表达式集合</param>
+            <returns>成功标志</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.ESqlQueryTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.String)">
+            <summary>
+            ESql单表查询使用
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="SysType"></param>
+            <param name="ESql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.QueryTable``1(Winning.FrameWork.Kernel.Enum.SystemType,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            单表查询使用
+            </summary>
+            <typeparam name="T">表实体类型</typeparam>
+            <param name="SysType">系统大类</param>
+            <param name="where">lambda表达式</param>
+            <returns>表实体集合</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.GetIdentity(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Int32)">
+            <summary>
+            取一组自增列数据
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <param name="TableName">库表名称</param>
+            <param name="ValueCount">返回记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DataObj.GetIdentity(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Int32,Winning.FrameWork.DAL.Kernel.IAdoDb)">
+            <summary>
+            取一组自增列数据,服务模式转接使用，不可直接调用
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <param name="TableName">库表名称</param>
+            <param name="ValueCount">返回记录数</param>
+            <param name="uSql">外部指定连接组件</param>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.DataObj.DbTran">
+            <summary>
+            框架全局事务处理对象
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.DbTransactionPack">
+            <summary>
+            数据提交事务包处理
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.IDbTransactionPack">
+            <summary>
+            数据事务任务包，用于集中提交一组数据库事务
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDbTransactionPack.BeginDbTran(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            启动指定的系统数据库的事务
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDbTransactionPack.AppendDbTranPack``1(``0,Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一条数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDbTransactionPack.AppendDbTranPack``1(System.Collections.Generic.List{``0},Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一组数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据包</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDbTransactionPack.AppendDbTranPack``1(``0,System.String,Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一条数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDbTransactionPack.AppendDbTranPack``1(System.Collections.Generic.List{``0},System.String,Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一组数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据包</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.IDbTransactionPack.CommitDbTran">
+            <summary>
+            提及事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.IDbTransactionPack.Nolock">
+            <summary>
+            启动脏读接口，
+            调用方法示例 ,谨慎使用，在服务器启动了MSDTC服务的情况下，可正常使用
+            using (var TransNolock = DataHelper.DataObj.DbTran.Nolock)
+            {
+            ..........
+                    TransNolock.Complete();
+            }
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DbTransactionPack.BeginDbTran(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            启动指定的系统数据库的事务
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DbTransactionPack.AppendDbTranPack``1(``0,Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一条数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DbTransactionPack.AppendDbTranPack``1(System.Collections.Generic.List{``0},Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一组数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据包</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DbTransactionPack.AppendDbTranPack``1(``0,System.String,Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一条数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DbTransactionPack.AppendDbTranPack``1(System.Collections.Generic.List{``0},System.String,Winning.FrameWork.IDAL.ActionType)">
+            <summary>
+            添加一组数据到事务包中
+            </summary>
+            <typeparam name="T">指定数据类型</typeparam>
+            <param name="DataPack">数据包</param>
+            <param name="DataClassName">数据类名</param>
+            <param name="Action">操作类型</param>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.DbTransactionPack.CommitDbTran">
+            <summary>
+            提及事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Winning.FrameWork.IDAL.DbTransactionPack.Nolock">
+            <summary>
+            启动脏读接口，
+            调用方法示例 ,谨慎使用，在服务器启动了MSDTC服务的情况下，可正常使用
+            using (var TransNolock = DataHelper.DataObj.DbTran.Nolock)
+            {
+            ..........
+                    TransNolock.Complete();
+            }
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.GetIdentityObj">
+            <summary>
+            取得指定库表的一组自增列数据
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.GetIdentityObj.CreateAllTablePkColumn(Winning.FrameWork.Kernel.Enum.SystemType,Winning.FrameWork.DAL.Kernel.IAdoDb)">
+            <summary>
+            取得指定系统的所有库表的主键字段信息
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.GetIdentityObj.CreateAllTablePkColumn(Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            取得指定系统的所有库表的主键字段信息
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.GetIdentityObj.GetTablePkColumn(System.String,Winning.FrameWork.Kernel.Enum.SystemType,Winning.FrameWork.DAL.Kernel.IAdoDb)">
+            <summary>
+            取得指定系统库表的主键字段名
+            </summary>
+            <param name="TableName">指定表名</param>
+            <param name="SysCode">系统大类代码</param>
+            <param name="uSql">外部传入数据库访问组件</param>
+            <returns>返回指定的库表的主键名</returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.GetIdentityObj.GetTablePkColumn(System.String,Winning.FrameWork.Kernel.Enum.SystemType)">
+            <summary>
+            取得指定系统库表的主键字段名
+            </summary>
+            <param name="SysCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.GetIdentityObj.Get(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Int32)">
+            <summary>
+            取一组自增列数据
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <param name="TableName">库表名称</param>
+            <param name="ValueCount">返回记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.GetIdentityObj.Get(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Int32,Winning.FrameWork.DAL.Kernel.IAdoDb)">
+            <summary>
+            取一组自增列数据
+            </summary>
+            <param name="SysCode">系统大类代码</param>
+            <param name="TableName">库表名称</param>
+            <param name="ValueCount">返回记录数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.ActionType">
+            <summary>
+            操作类型
+            </summary>
+        </member>
+        <member name="F:Winning.FrameWork.IDAL.ActionType.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="F:Winning.FrameWork.IDAL.ActionType.Insert">
+            <summary>
+            新增
+            </summary>
+        </member>
+        <member name="F:Winning.FrameWork.IDAL.ActionType.Update">
+            <summary>
+            修改
+            </summary>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.TimeSpy">
+            <summary>
+            时间消耗监视器类
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.TimeSpy.StartSpy">
+            <summary>
+            启动时间消耗监视器
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.TimeSpy.StopSpy(System.String@)">
+            <summary>
+            停止时间消耗监视器
+            </summary>
+            <param name="TimeElapse">时间消耗值(秒)</param>
+        </member>
+        <member name="T:Winning.FrameWork.IDAL.WordBookQuery">
+            <summary>
+            调用WordBook的查询
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.WordBookQuery.AssmbleWord(System.Object[])">
+            <summary>
+            反射WordBook的数据处理原形
+            </summary>
+        </member>
+        <member name="M:Winning.FrameWork.IDAL.WordBookQuery.Query(Winning.FrameWork.Kernel.Enum.SystemType,System.String,System.Boolean)">
+            <summary>
+            执行WordBook的EntitySql的查询语句
+            </summary>
+            <param name="SysType"></param>
+            <param name="EntitySQL"></param>
+            <param name="SearchStr"></param>
+            <param name="WherePy"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
