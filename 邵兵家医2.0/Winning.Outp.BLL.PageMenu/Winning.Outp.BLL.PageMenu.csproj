@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\分支医院\家庭医生站\</OutputPath>
+    <OutputPath>bin\x86\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -83,40 +83,35 @@
       <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.FrameWork.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Winning.Model.Common, Version=5.14.06.16, Culture=neutral, processorArchitecture=32位">
+    <Reference Include="Winning.Model.Common, Version=5.14.6.16, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Model.Common.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>bin\x86\Debug\Winning.Model.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Winning.Model.Outp, Version=5.14.5.19, Culture=neutral, processorArchitecture=32位">
+    <Reference Include="Winning.Model.Outp, Version=5.14.5.19, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Model.Outp.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>bin\x86\Debug\Winning.Model.Outp.dll</HintPath>
     </Reference>
     <Reference Include="Winning.Outp.Core, Version=5.14.5.19, Culture=neutral, processorArchitecture=32位">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.Core.dll</HintPath>
+      <HintPath>bin\x86\Debug\Winning.Outp.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Winning.Outp.Core.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=32位">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.Core.Common.dll</HintPath>
+      <HintPath>bin\x86\Debug\Winning.Outp.Core.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Winning.Outp.DAL.PatInfo.DataObject, Version=5.14.5.19, Culture=neutral, processorArchitecture=32位">
+    <Reference Include="Winning.Outp.DAL.PatInfo.DataObject, Version=5.14.5.19, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.DAL.PatInfo.DataObject.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>bin\x86\Debug\Winning.Outp.DAL.PatInfo.DataObject.dll</HintPath>
     </Reference>
-    <Reference Include="Winning.Outp.UI.JTYS.GetChssForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=32位">
+    <Reference Include="Winning.Outp.UI.JTYS.GetChssForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.UI.JTYS.GetChssForm.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>bin\x86\Debug\Winning.Outp.UI.JTYS.GetChssForm.dll</HintPath>
     </Reference>
-    <Reference Include="Winning.Outp.UI.JTYS.HealthStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=32位">
+    <Reference Include="Winning.Outp.UI.JTYS.HealthStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FrameWork\CIS_家医2\Winning.Outp.UI.JTYS.HealthStatus.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>bin\x86\Debug\Winning.Outp.UI.JTYS.HealthStatus.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +214,7 @@
     <Compile Include="WdkfmzCommand.cs" />
     <Compile Include="WorkflowSetCommand.cs" />
     <Compile Include="XinZhiIntegrationQueryCommand.cs" />
+    <Compile Include="YbmjzcfcxCommand.cs" />
     <Compile Include="YldyCommand.cs" />
     <Compile Include="DiseaseCertificateCommand.cs" />
     <Compile Include="SpecialDiseaseCommand.cs" />

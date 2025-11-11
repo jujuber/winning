@@ -28,7 +28,7 @@ namespace Winning.Outp.External.wdpatsign
                 return;
             }
 
-            if (System.DateTime.Now >= new DateTime(2025, 10, 8))
+            if (System.DateTime.Now >= new DateTime(2026, 10, 8))
             {
                 MessageBox.Show("获取数据异常，请联系管理员");
                 return;
